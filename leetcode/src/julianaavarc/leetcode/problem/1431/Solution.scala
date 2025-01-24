@@ -60,7 +60,7 @@ object Solution:
           case Some(max) =>
             if childsCandyCount > max
             then maxOption = Some(childsCandyCount)
-            
+
             result += childsCandyCount + extraCandies >= max
 
       result.toList

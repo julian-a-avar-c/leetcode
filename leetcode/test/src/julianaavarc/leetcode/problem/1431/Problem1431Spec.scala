@@ -13,20 +13,20 @@ val examples =
   Table(
     (
       "input",
-      "output"
+      "output",
     ),
     (
       (candies = Array(2, 3, 5, 1, 3), extraCandies = 3),
-      List(true, true, true, false, true)
+      List(true, true, true, false, true),
     ),
     (
       (candies = Array(4, 2, 1, 1, 2), extraCandies = 1),
-      List(true, false, false, false, false)
+      List(true, false, false, false, false),
     ),
     (
       (candies = Array(12, 1, 12), extraCandies = 10),
-      List(true, false, true)
-    )
+      List(true, false, true),
+    ),
   )
 end examples
 

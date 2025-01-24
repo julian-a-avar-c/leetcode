@@ -13,7 +13,7 @@ val examples = Table(
   ("input", "output"),
   ((true, true), true),
   ((true, true), true),
-  ((true, true), true)
+  ((true, true), true),
 )
 
 class ProblemTemplateSpec extends AnyFlatSpec with should.Matchers:

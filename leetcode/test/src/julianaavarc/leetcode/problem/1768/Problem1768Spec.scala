@@ -13,7 +13,7 @@ val examples = Table(
   ("input", "output"),
   ((word1 = "abc", word2 = "pqr"), "apbqcr"),
   ((word1 = "ab", word2 = "pqrs"), "apbqrs"),
-  ((word1 = "abcd", word2 = "pq"), "apbqcd")
+  ((word1 = "abcd", word2 = "pq"), "apbqcd"),
 )
 
 class Problem1768Spec extends AnyFlatSpec with should.Matchers:

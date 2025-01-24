@@ -13,11 +13,11 @@ val examples =
   Table(
     (
       "input",
-      "output"
+      "output",
     ),
     ((str1 = "ABCABC", str2 = "ABC"), "ABC"),
     ((str1 = "ABABAB", str2 = "ABAB"), "AB"),
-    ((str1 = "LEET", str2 = "CODE"), "")
+    ((str1 = "LEET", str2 = "CODE"), ""),
   )
 end examples
 
