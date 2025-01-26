@@ -18,6 +18,8 @@ create-problem n:
   new_problem_test_dir="$problem_test_dir/{{n}}"
   new_problem_test="$new_problem_test_dir/Problem{{n}}Spec.scala"
 
+  git checkout -b problem/{{n}}
+
   mkdir "$new_problem_dir"
   cp "$old_problem" "$new_problem"
   sed -i 's/\.template/.\`{{n}}\`/gI' "$new_problem"
