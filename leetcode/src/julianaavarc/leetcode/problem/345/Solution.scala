@@ -34,7 +34,6 @@ object Solution:
     */
   case object `1` extends Solution:
     val solved = true
-    // val vowels = "AEIOUaeiou".toSet
     val vowels = "AEIOUaeiou".toSet
     def reverseVowels(s: String): String =
       val mutS = StringBuilder(s)
@@ -58,4 +57,33 @@ object Solution:
       mutS.toString
     end reverseVowels
   end `1`
+
+  /** Same as 1, but using an inline method, instead of a set
+    */
+  case object `2` extends Solution:
+    val solved = true
+    inline def isVowel(c: Char) =
+      c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U' || c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u'
+    def reverseVowels(s: String): String =
+      val mutS = StringBuilder(s)
+
+      var (ai, bi)     = (0, s.length - 1)
+      inline def nextA = ai += 1
+      inline def nextB = bi -= 1
+      while ai < bi do // Pointers don't overlap
+        val (a, b)   = (s(ai), s(bi))
+        val aIsVowel = isVowel(a)
+        val bIsVowel = isVowel(b)
+        if !aIsVowel then nextA
+        if !bIsVowel then nextB
+
+        if aIsVowel && bIsVowel then
+          mutS(ai) = b
+          mutS(bi) = a
+          nextA; nextB
+      end while
+
+      mutS.toString
+    end reverseVowels
+  end `2`
 end Solution
