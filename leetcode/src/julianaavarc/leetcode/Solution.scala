@@ -9,6 +9,6 @@ trait Solution:
 
 object Solution:
   enum Difficulty:
-    case Easy
+    case Easy, Medium
   enum Topic:
     case `Two Pointers`, String, Array, Math
