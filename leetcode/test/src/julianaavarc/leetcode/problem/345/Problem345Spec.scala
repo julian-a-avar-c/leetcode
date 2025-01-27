@@ -11,15 +11,14 @@ import org.scalatest.prop.TableDrivenPropertyChecks.*
 
 val examples = Table(
   ("input", "output"),
-  ((true, true), true),
-  ((true, true), true),
-  ((true, true), true),
+  ("IceCreAm", "AceCreIm"),
+  ("leetcode", "leotcede"),
 )
 
 class Problem345Spec extends AnyFlatSpec with should.Matchers:
-  "Solution 1" should "match examples" ignore {
+  "Solution 1" should "match examples" in {
     forAll(examples) { (input, expected) =>
-      val actual = Solution.`1`.method.tupled(input)
+      val actual = Solution.`1`.reverseVowels(input)
       actual should equal { expected }
     }
   }
