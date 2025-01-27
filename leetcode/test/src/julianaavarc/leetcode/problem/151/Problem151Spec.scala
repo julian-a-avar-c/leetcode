@@ -23,4 +23,10 @@ class Problem151Spec extends AnyFlatSpec with should.Matchers:
       actual should equal { expected }
     }
   }
+  "Solution 2" should "match examples" in {
+    forAll(examples) { (input, expected) =>
+      val actual = Solution.`2`.reverseWords(input)
+      actual should equal { expected }
+    }
+  }
 end Problem151Spec

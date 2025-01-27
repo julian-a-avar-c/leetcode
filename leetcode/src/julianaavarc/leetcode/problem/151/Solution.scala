@@ -54,4 +54,18 @@ object Solution:
       s.split(" ").filter(_.nonEmpty).reverse.mkString(" ")
     end reverseWords
   end `1`
+
+  /** Same as 1, but using `reverseIterator` and regex
+    *
+    * [[String.split(regex:String)]] takes in a string in the form of a regular
+    * expression, so by trimming the input string, one can split over multiple
+    * spaces. Then instead of reversing it and returning a value which will then
+    * have to be iterated over, we can return the iterator instead.
+    */
+  case object `2` extends Solution:
+    val solved = false
+    def reverseWords(s: String): String =
+      s.trim.split(" +").reverseIterator.mkString(" ")
+    end reverseWords
+  end `2`
 end Solution
